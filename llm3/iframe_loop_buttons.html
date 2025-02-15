@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe Loader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        iframe {
+            width: 80%;
+            height: 500px;
+            border: 1px solid #ccc;
+        }
+        .controls {
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iframe Auto Loader</h1>
+    <div class="controls">
+        <button onclick="pauseCycle()">Pause</button>
+        <button onclick="resumeCycle()">Resume</button>
+    </div>
+    <iframe id="contentFrame" src="page1.html"></iframe>
+    <script>
+        let pages = ["page1.html", "page2.html", "page3.html"];
+        let index = 0;
+        let interval;
+        let isPaused = false;
+
+        function loadNextPage() {
+            if (!isPaused) {
+                index = (index + 1) % pages.length;
+                document.getElementById("contentFrame").src = pages[index];
+            }
+        }
+
+        function startCycle() {
+            interval = setInterval(loadNextPage, 20000);
+        }
+
+        function pauseCycle() {
+            isPaused = true;
+        }
+
+        function resumeCycle() {
+            isPaused = false;
+        }
+
+        startCycle();
+    </script>
+</body>
+</html>
