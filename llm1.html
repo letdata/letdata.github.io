@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Four Quadrants with Flexbox</title>
+  <style>
+    /* Remove default margin and set full height */
+    html, body {
+      margin: 0;
+      height: 100%;
+    }
+
+    /* The container uses flexbox with wrapping enabled */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      height: 100vh; /* Use the full viewport height */
+    }
+
+    /* Each quadrant takes up 50% of the width */
+    .quadrant {
+      flex: 1 0 50%;
+      box-sizing: border-box; /* Ensures borders are included in the width */
+      border: 1px solid #333; /* Optional: visual separator */
+      display: flex;
+      align-items: top;
+      justify-content: left;
+      font-size: 1.1rem;
+	font-family:cosolas, sans-serif;
+	padding: 0.5em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+	<div class="quadrant">
+	systra<br>
+	item1
+
+	</div>
+    <div class="quadrant">
+	next<br>
+	item1
+
+</div>
+    <div class="quadrant">
+	Other<br>
+	item1
+
+</div>
+    <div class="quadrant">
+	Calendar<br>
+	item1
+
+</div>
+  </div>
+</body>
+</html>
