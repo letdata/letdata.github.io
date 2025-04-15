@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calendar</title>
+<script src="https://unpkg.com/htmx.org@2.0.4" integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+" crossorigin="anonymous"></script>
+<style>
+    body {
+	color: #fed;
+	background: #123;
+	font-family: consolas, sans-serif;
+	font-size: 1.2em;
+    }
+</style>
+</head>
+<body>
+
+<div
+	id="email_pane"
+	hx-get=""
+	hx-trigger="every 15s"
+	hx-select="#email_pane"
+	hx-swapp="innerHTML"
+>
+<pre>
+EMAIL 20:22
+
+dr. dixon - ed stats
+
+2025-04-14
+sabrina g. - ucc marketing reports
+
+- - - - - - - - - - - - - - - - - - -
+
+2025-04-11
+ana laura r. - ssrda outpatient ... clinic historical stats
+
+
+</pre>
+</div>
+
+</body></html>

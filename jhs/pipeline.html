@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>|</title>
+ 
+ <script src="https://unpkg.com/htmx.org@2.0.4" integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+" crossorigin="anonymous"></script>
+  
+<style>
+    body {
+	color: #fed;
+	background: #123;
+	font-family: consolas, sans-serif;
+	font-size: 1.25em;
+    }
+</style>
+</head>
+<body>
+
+<div
+	id="pipeline_pane"
+	hx-get=""
+	hx-trigger="every 15s"
+	hx-select="#pipeline_pane"
+	hx-swapp="innerHTML"
+>
+<pre>
+PIPELINE 20:28
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+clinicaldm.[dbo].[sploaddata_kmt_chs_intake_er_diversions]
+
+clinicaldm_sploaddata_kmt_clinic_historical_stats.sql
+
+Carebridge NOW/THIS WEEK
+- population compare to iround
+- data warehouse fields/refresh
+- Patient queue by care tactic
+  teresita is going to design the interface
+  i need to start working on the procedure
+
+chs
+- dr. de jesus forms - one each friday
+- offsite referrals
+- sick calls report - reason is missing
+  andrea is going to send examples
+
+chs/rose - vw_kmt_chs_continuity_of_meds IS NOT REFRESHING
+- [jhssqlpda] exec sploaddata_kmt_chs_continuity_of_meds;
+
+arturo r. - pt scheduling proc - perphys, verphys
+- how are they updated? from the notes or manual entry
+
+</pre>
+</div>
+</body>
+</html>
