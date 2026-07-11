@@ -1,0 +1,8 @@
+size,color,quantity
+small,green,40
+medium,yellow,20
+large,red,30
+large,white,0
+large,black,1000
+medium,blue,-20
+small,pink,-100
